@@ -1,7 +1,7 @@
 version: "3.1"
 services:
   master:
-    image: ajeetraina/apache-jmeter-master
+    image: agilecontentproducts/agile-performance-jmeter-manager-v2
     tty: true
     ports:
       - "60000"
@@ -17,7 +17,7 @@ services:
       placement:
           constraints: [node.role == manager]
   slave:
-    image: ajeetraina/apache-jmeter-server
+    image: agilecontentproducts/agile-performance-jmeter-worker-v2
     tty: true
     networks:
       - jm-network
